@@ -8,7 +8,7 @@ int min = 19;
 int max = 91;
 
 int [] arr = new int[size]; 
-Random rand = new Random(01);
+Random rand = new Random();
 for (int i = 0; i < size; i++)
 {
     arr[i] = rand.Next(1, 100); 
