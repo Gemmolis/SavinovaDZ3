@@ -2,13 +2,13 @@
 // Напишите программу, которая определяет
 // количество чётных чисел в массиве.
 
-System.Console.Write("введите количество элементов в массиве: "); 
-int size = Convert.ToInt32(Console.ReadLine());
+//System.Console.Write("введите количество элементов в массиве: "); 
+int size = 10; //Convert.ToInt32(Console.ReadLine());
 int [] arr = new int[size]; 
-Random rand = new Random();
+Random rand = new Random(1);
 for(int i = 0; i < size; i++)
 {
-    arr[i] = rand.Next(); 
+    arr[i] = rand.Next(0, 11); // rand.Next( ) граница массива
 }
 for(int i = 0; i < size; i++)
 {
@@ -16,18 +16,15 @@ for(int i = 0; i < size; i++)
 }
 
 int number = 0;
-int itog = 0;
-for (int i = 0; i < size; i++)
+for (int i = 0; i < size; ++i)
 {
       if (arr[i] % 2 == 0)
       {
-        number =  1;
-        itog = itog + number;
+        ++number;
       }
       
-
-Console.WriteLine( itog + " четных чисел");
-     }
+}
    
+   Console.WriteLine("четных чисел " + number );
 
 
